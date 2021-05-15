@@ -35,20 +35,21 @@ class Quiz{
      text("--------------------",320,65);
      Contestant.getPlayerInfo();
 
-     if(allPlayers !== undefined){
+     if(allContestants !== undefined){
+       debugger;
       var displayAnswers = 230;
       fill("blue");
       textSize(20);
       text(" *NOTE: Contestants who answered correct are highlighted in green color!*",130,230);
 
-      for(var plr in allPlayers){
+      for(var plr in allContestants){
         var correctAns = 2;
         if(correctAns === allContestants[plr].answer)
           fill("green");
           else
             fill("red");
 
-            
+            display_Answers +=30;
             textSize(20);
             text(allContestants[plr].name + ": " + allContestants[plr].answer,250,displayAnswers );
 
